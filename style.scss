@@ -1,10 +1,14 @@
-@use 'toRemFunc';
+@function toRem($pixels) {
+    $rem: calc($pixels / 16) + rem;
+    @return $rem;
+}
+
+
 
 @function increment($var1, $var2) {
     $var1: $var1 + $var2;
     @return $var1;
 }
-
 
 
 @mixin article-card($color, $border-color, $font-size) {
@@ -15,23 +19,23 @@
 
 %text-style {
     color: green;
-    border-bottom: 1px solid blue;
+    border-bottom: toRem(1) solid blue;
 }
 body {
     .all-container {
-        border: 1px solid red;
+        border: toRem(1) solid red;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: .7rem;
-        gap: .5rem;
+        padding: toRem(11.2);
+        gap: toRem(8);
         h1 {
             @extend %text-style;
         }
         h2 {
             @extend %text-style;
-            padding: 1rem;
-            border: 1px solid red;
+            padding: toRem(16);
+            border: toRem(1) solid red;
         }
         .main {
             display: flex;
@@ -39,10 +43,10 @@ body {
                 text-align: center;
             }
             .blue {
-                @include article-card(blue, green, 1rem);
+                @include article-card(blue, green, toRem(16));
             }
             .red {
-                @include article-card(red, green, 1rem);
+                @include article-card(red, green, toRem(16));
             }
         }
         .squares-container {
@@ -51,12 +55,12 @@ body {
             flex-direction: row;
             justify-content: space-between;
             .square {
-                height: 45px;
-                width: 45px;
-                border: 1px solid red;
+                height: toRem(45);
+                width: toRem(45);
+                border: toRem(1) solid red;
             }
 
-            $rems: 1rem, 2rem, 3rem;
+            $rems: toRem(16), toRem(32), toRem(48);
             @each $rem-val in $rems {
                 .fs-#{$rem-val} {
                     font-size: $rem-val;
@@ -88,7 +92,7 @@ body {
     }
 
         .footer {
-            @include article-card(green, blue, 24px);
+            @include article-card(green, blue, toRem(24));
             width: 100%;
             text-align: center;
         }

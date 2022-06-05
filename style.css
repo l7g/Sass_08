@@ -1,10 +1,10 @@
 body .all-container h2, body .all-container h1 {
   color: green;
-  border-bottom: 1px solid blue;
+  border-bottom: 0.0625rem solid blue;
 }
 
 body .all-container {
-  border: 1px solid red;
+  border: 0.0625rem solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@ body .all-container {
 }
 body .all-container h2 {
   padding: 1rem;
-  border: 1px solid red;
+  border: 0.0625rem solid red;
 }
 body .all-container .main {
   display: flex;
@@ -38,9 +38,9 @@ body .all-container .squares-container {
   justify-content: space-between;
 }
 body .all-container .squares-container .square {
-  height: 45px;
-  width: 45px;
-  border: 1px solid red;
+  height: 2.8125rem;
+  width: 2.8125rem;
+  border: 0.0625rem solid red;
 }
 body .all-container .squares-container .fs-1rem {
   font-size: 1rem;
@@ -130,7 +130,7 @@ body .all-container .squares-container div:nth-of-type(19) {
 body .all-container .footer {
   color: green;
   border: 1px solid blue;
-  font-size: 24px;
+  font-size: 1.5rem;
   width: 100%;
   text-align: center;
 }
