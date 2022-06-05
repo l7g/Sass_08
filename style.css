@@ -32,15 +32,15 @@ body .all-container .main .red {
   font-size: 1rem;
 }
 body .all-container .squares-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 body .all-container .squares-container .square {
   height: 45px;
   width: 45px;
-  color: black;
   border: 1px solid red;
-  font-size: 1px;
 }
 body .all-container .squares-container .fs-1rem {
   font-size: 1rem;
@@ -50,6 +50,82 @@ body .all-container .squares-container .fs-2rem {
 }
 body .all-container .squares-container .fs-3rem {
   font-size: 3rem;
+}
+body .all-container .squares-container div:nth-of-type(1) {
+  background-color: white;
+  color: black;
+}
+body .all-container .squares-container div:nth-of-type(2) {
+  background-color: #f2f2f2;
+  color: #0d0d0d;
+}
+body .all-container .squares-container div:nth-of-type(3) {
+  background-color: #e6e6e6;
+  color: #1a1a1a;
+}
+body .all-container .squares-container div:nth-of-type(4) {
+  background-color: #d9d9d9;
+  color: #262626;
+}
+body .all-container .squares-container div:nth-of-type(5) {
+  background-color: #cccccc;
+  color: #333333;
+}
+body .all-container .squares-container div:nth-of-type(6) {
+  background-color: #bfbfbf;
+  color: #404040;
+}
+body .all-container .squares-container div:nth-of-type(7) {
+  background-color: #b3b3b3;
+  color: #4d4d4d;
+}
+body .all-container .squares-container div:nth-of-type(8) {
+  background-color: #a6a6a6;
+  color: #595959;
+}
+body .all-container .squares-container div:nth-of-type(9) {
+  background-color: #999999;
+  color: #666666;
+}
+body .all-container .squares-container div:nth-of-type(10) {
+  background-color: blue;
+  color: red;
+}
+body .all-container .squares-container div:nth-of-type(11) {
+  background-color: gray;
+  color: gray;
+}
+body .all-container .squares-container div:nth-of-type(12) {
+  background-color: #737373;
+  color: #8c8c8c;
+}
+body .all-container .squares-container div:nth-of-type(13) {
+  background-color: #666666;
+  color: #999999;
+}
+body .all-container .squares-container div:nth-of-type(14) {
+  background-color: #595959;
+  color: #a6a6a6;
+}
+body .all-container .squares-container div:nth-of-type(15) {
+  background-color: #4d4d4d;
+  color: #b3b3b3;
+}
+body .all-container .squares-container div:nth-of-type(16) {
+  background-color: #404040;
+  color: #bfbfbf;
+}
+body .all-container .squares-container div:nth-of-type(17) {
+  background-color: #333333;
+  color: #cccccc;
+}
+body .all-container .squares-container div:nth-of-type(18) {
+  background-color: #262626;
+  color: #d9d9d9;
+}
+body .all-container .squares-container div:nth-of-type(19) {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
 }
 body .all-container .footer {
   color: green;

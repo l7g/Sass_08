@@ -5,6 +5,8 @@
     @return $var1;
 }
 
+
+
 @mixin article-card($color, $border-color, $font-size) {
     color: $color;
     border: 1px solid $border-color;
@@ -44,13 +46,14 @@ body {
             }
         }
         .squares-container {
+            width: 100%;
             display: flex;
             flex-direction: row;
-            
+            justify-content: space-between;
             .square {
                 height: 45px;
                 width: 45px;
-                @include article-card(black, red, 1px);
+                border: 1px solid red;
             }
 
             $rems: 1rem, 2rem, 3rem;
@@ -59,46 +62,38 @@ body {
                     font-size: $rem-val;
                 }
             }
-            
-            
-
-        }
-        $amount: 5;
-        $counter: 0;
-        $nchild: 1;
-        @for $number from 0 to 19 {
-            @if ($counter > 9) {
-                .squares-container:nth-child(#{$nchild}) {
-                    color: lighten($amount);
-                    background-color: darken($amount);
+            $white-color: white;
+            $black-color: black;
+            $amount: 0;
+            $ntype: 1;
+            @for $times from 1 to 20 {
+                @if ($times != 10){
+                    div:nth-of-type(#{$ntype}) {
+                        background-color: darken($white-color, $amount);
+                        color: lighten($black-color, $amount);
+                    }
+                } @else {
+                    div:nth-of-type(#{$ntype}) {
+                        background-color: blue;
+                        color: red;
+                    }
+                    
                 }
-                $amount: increment(#{$amount}, 5 );
-                $nchild: increment(#{$nchild}, 1 );
-                $counter: increment(#{$counter}, 1 );
-            } @else if ($counter == 9) {
-                .squares-container:nth-child(#{$nchild}) {
-                    color: red;
-                    background-color: blue;
-                }
-                $amount: increment(#{$amount}, 5 );
-                $nchild: increment(#{$nchild}, 1 );
-                $counter: increment(#{$counter}, 1 );
-            } @else if ($counter > 9) {
-                .squares-container:nth-child(#{$nchild}) {
-                    color: darken($amount);
-                    background-color: lighten($amount);
-                }
-                $amount: increment(#{$amount}, 5 );
-                $nchild: increment(#{$nchild}, 1 );
-                $counter: increment(#{$counter}, 1 );
-            }
-        }
+                $amount: $amount + 5;
+                $ntype: $ntype + 1;
+            }  
         
+        
+        
+    }
 
         .footer {
             @include article-card(green, blue, 24px);
             width: 100%;
             text-align: center;
         }
+    
     }
-}
+ }
+
+
